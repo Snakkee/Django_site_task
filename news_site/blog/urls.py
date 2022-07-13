@@ -1,5 +1,5 @@
-
-
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 
 from django.urls import path
@@ -19,5 +19,5 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('topic/<int:cat>', topics),
     path('registr/',RegisterUser.as_view(),name='register'),
-]
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
