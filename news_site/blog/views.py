@@ -131,8 +131,7 @@ class ShowPost(DataMixin,DetailView):
 
 
 
-#def login(request):
-    #return HttpResponse('Авторизация')
+
 
 class BlogHome(ListView):
     model=Post
@@ -176,5 +175,5 @@ def topics(request, cat):
     return HttpResponse(f"<h1>Новости по блогам</h1><p>{cat}</p>")
 
 
-def page_not_found(request, exception):
+def page_not_found(request, exception):  #404
     return HttpResponseNotFound('<h1>Страница не найдена</h1>')
