@@ -18,6 +18,7 @@ class AddPostForm(forms.ModelForm):
         self.fields['cat'].empty_label="Выберите тему"
         self.fields['cat'].label= "Категория"
         self.fields['is_published'].label = "Опубликовать"
+        self.fields['photo'].label='Фото'
 
 
     class Meta:
